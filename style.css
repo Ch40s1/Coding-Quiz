@@ -1,11 +1,35 @@
-/* make background color 
+/* make background color  */
+body{
+  height: 100vh;
+  
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 
-make border for box 
+#question{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  border: 10px solid rgb(205, 244, 13);
+}
+h2{
+  background-color: aqua;
+  flex-basis: 10vh;
+}
+ol{
+  background-color: blueviolet;
+}
+li{
+  height: 50px;
+}
+/* box is 50% big  */
 
-make box centered 
+/* box has rounded corners  */
 
-box is 50% big 
-
-box has rounded corners 
-
-answers have hover effect  */
+/* answers have hover effect  */
