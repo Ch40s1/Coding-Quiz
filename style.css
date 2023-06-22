@@ -1,35 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 /* make background color  */
+*{
+  font-family: "Russon One", sans-serif;
+}
 body{
   height: 100vh;
-  
   background-color: black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   
 }
-
-#question{
+.timer{
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  color: #fff;
+}
+.nav{
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: white;
-  width: 500px;
-  height: 500px;
-  border: 10px solid rgb(205, 244, 13);
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+}
+#container{
+  background-color: #fff;
+  width: 60%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.problem{
+  margin: 20px 25px;
+
 }
 h2{
-  background-color: aqua;
-  flex-basis: 10vh;
+  text-align: center;
+  margin-top: 0;
+  padding: 30px;
+  background-color: lime;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: solid black;
 }
-ol{
-  background-color: blueviolet;
+.questions{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  color: black;
+  margin: 25px 10px;
 }
-li{
-  height: 50px;
-}
-/* box is 50% big  */
 
-/* box has rounded corners  */
-
-/* answers have hover effect  */
+.btn{
+  text-align: left;
+  margin: 10px;
+  padding: 15px;
+}
