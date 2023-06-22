@@ -15,3 +15,7 @@
 // put initials in a box and submit to the leaderboard 
 
 // game can be restarted 
+
+// <!-- html button designing and calling the event in javascript -->
+// <input id="btntest" type="button" value="Check" 
+//        onclick="window.location.href = 'http://www.google.com'" />

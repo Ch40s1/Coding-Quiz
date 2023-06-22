@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+:root{
+  --Russo-font: Russo One, sans-serif;
+}
+/************************************************/
+/* Quiz Page
+/************************************************/
+
+*{
+  font-family: "Russon One", sans-serif;
+}
+body{
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/tech.jpeg");
+  object-fit: cover;
+  
+  
+}
+.timer{
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  color: #fff;
+}
+.nav{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+}
+#container{
+  background-color: #fff;
+  width: 60%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.problem{
+  margin: 20px 25px;
+
+}
+h2{
+  text-align: center;
+  margin-top: 0;
+  padding: 30px;
+  background-color: lime;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: solid black;
+}
+.questions{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  color: black;
+  margin: 25px 10px;
+}
+
+.btn{
+  text-align: left;
+  margin: 10px;
+  padding: 15px;
+}
+
+.score-btn, .home-btn{
+  background-color: lime;
+  font-size: 20px;
+  font-family: "Russo one", sans-serif;
+}
+
+/************************************************/
+/* Home Page
+/************************************************/
+
+.title-page-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-title{
+  color: #fff;
+  font-size: 50px;
+  font-family: "Russo one", sans-serif;
+  text-shadow:
+  0.30em 0 black,
+  0 0.30em black,
+  -0.30em 0 black,
+  0 -0.30em black;
+}
+#start-btn{
+width: 100px;
+font-size: 20px;
+font-family: "Russo one", sans-serif;
+font-weight: lighter;
+}
+
+.home-score{
+  margin-top: 40px;
+  padding: 10px;
+}
+
+
+/************************************************/
+/* leaderBoard
+/************************************************/
+
+.leaderboard-title{
+  color: #fff;
+  font-size: 50px;
+  font-family: "Russo one", sans-serif;
+  text-shadow:
+  0.30em 0 black,
+  0 0.30em black,
+  -0.30em 0 black,
+  0 -0.30em black;
+}
+.current-scores{
+ align-content: flex-start;
+ padding: 10px;
+}
+.current-scores > li{
+  background-color: #fff;
+  list-style: none;
+  padding: 10px;
+  border: 3px solid black;
+}
+#initials, #send-score{
+  font-size: 20px;
+}
+#send-score{
+  font-family: "";
+  font-family: var(--Russo-font);
+}
+
