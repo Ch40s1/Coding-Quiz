@@ -1,17 +1,34 @@
-// load quiz //
-// const startBtn = document.querySelector("#start-btn");
-
-// //click start and go to quiz html
-// startBtn.addEventListener("click", () => {
-//   window.location.href = "./html-pages/quiz.html";
-// });
-
-//setting up the quiz///
-
 // make a object with q and a 
 const quizIndex = [
   {
     question: "how are you ?",
+    answerIndex: [ 
+      {answer: "lol!", correct: true},
+      {answer: "happy!", correct: false},
+      {answer: "sadge", correct: false},
+      {answer: "bruh", correct: false}
+    ]
+  },
+  {
+    question: "how are you2 ?",
+    answerIndex: [ 
+      {answer: "lol!", correct: true},
+      {answer: "happy!", correct: false},
+      {answer: "sadge", correct: false},
+      {answer: "bruh", correct: false}
+    ]
+  },
+  {
+    question: "how are you3 ?",
+    answerIndex: [ 
+      {answer: "lol!", correct: true},
+      {answer: "happy!", correct: false},
+      {answer: "sadge", correct: false},
+      {answer: "bruh", correct: false}
+    ]
+  },
+  {
+    question: "how are you4 ?",
     answerIndex: [ 
       {answer: "lol!", correct: true},
       {answer: "happy!", correct: false},
@@ -23,19 +40,35 @@ const quizIndex = [
 // assign q and a to designated box 
 const questionBox = document.querySelector(".question");
 const answerBoxes = document.querySelectorAll(".answerBtn");
-
+//
 let currentNumber = 0;
-
 function showQuiz (){
   const currentQuestion = quizIndex[currentNumber];
   questionBox.textContent = currentQuestion.question;
 
   currentQuestion.answerIndex.forEach((answers, index) => {
     answerBoxes[index].textContent = answers.answer;
-    // answerBoxes[index].addEventListener('click', selectAnswer);
+    answerBoxes[index].addEventListener('click', function(){
+      selectAnswer(index, answers.correct);
+    });
   });
 }
 
+function selectAnswer(selectedIndex, isCorrect){
+  //checks answer if it is correct and 
+  if(isCorrect){
+    console.log("Correct answer");
+    currentNumber++;
+    if (currentNumber < quizIndex.length){
+      showQuiz();
+    }else {
+      console.log("quiz completed!");
+      //add completion code later lol
+    }
+  }else {
+    console.log("Icorrect answer");
+  }
+}
 showQuiz();
 
 // when aswers is clicked show answer right or wrong 
