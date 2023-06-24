@@ -16,29 +16,28 @@ const quizIndex = [
       {answer: "lol!", correct: true},
       {answer: "happy!", correct: false},
       {answer: "sadge", correct: false},
-      {amswer: "bruh", correct: false}
+      {answer: "bruh", correct: false}
     ]
   }
 ]
 // assign q and a to designated box 
 const questionBox = document.querySelector(".question");
-// const answerBox = document.querySelector(".answerBtn");
-// questionBox.textContent = quizIndex[0].question;
-// answerBox.textContent = quizIndex[0].answerIndex[1].answer;
-let currentQuestion = quizIndex[0].question;
-questionBox.textContent = currentQuestion;
 const answerBoxes = document.querySelectorAll(".answerBtn");
-let currentAnswer = quizIndex[0].answerIndex[0].answer;
-answerBoxes[0].textContent = currentAnswer;
-// let answerIndexLength = quizIndex[0].answerIndex.length;
-// console.log(answerIndexLength);
-// let answerContLenth = answerCont.length;
-// console.log(answerContLenth);
-/* when it is answerCont 0 then answerIndex should also be 0. quiz Index is the same.*/
-// function x(){
-//   let y = 0;
-//   let z = 0;
-// }
+
+let currentNumber = 0;
+
+function showQuiz (){
+  const currentQuestion = quizIndex[currentNumber];
+  questionBox.textContent = currentQuestion.question;
+
+  currentQuestion.answerIndex.forEach((answers, index) => {
+    answerBoxes[index].textContent = answers.answer;
+    // answerBoxes[index].addEventListener('click', selectAnswer);
+  });
+}
+
+showQuiz();
+
 // when aswers is clicked show answer right or wrong 
 
 // if answer is wrong deduct Time 
