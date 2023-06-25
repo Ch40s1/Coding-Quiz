@@ -1,39 +1,39 @@
 // make a object with q and a 
 const quizIndex = [
   {
-    question: "how are you ?",
+    question: "Question1",
     answerIndex: [ 
-      {answer: "lol!", correct: true},
-      {answer: "happy!", correct: false},
-      {answer: "sadge", correct: false},
-      {answer: "bruh", correct: false}
+      {answer: "true", correct: true},
+      {answer: "false!", correct: false},
+      {answer: "flase", correct: false},
+      {answer: "flase", correct: false}
     ]
   },
   {
-    question: "how are you2 ?",
+    question: "Question2",
     answerIndex: [ 
-      {answer: "lol!", correct: true},
-      {answer: "happy!", correct: false},
-      {answer: "sadge", correct: false},
-      {answer: "bruh", correct: false}
+      {answer: "false", correct: false},
+      {answer: "false", correct: false},
+      {answer: "true", correct: true},
+      {answer: "false", correct: false}
     ]
   },
   {
-    question: "how are you3 ?",
+    question: "Question3",
     answerIndex: [ 
-      {answer: "lol!", correct: true},
-      {answer: "happy!", correct: false},
-      {answer: "sadge", correct: false},
-      {answer: "bruh", correct: false}
+      {answer: "false", correct: false},
+      {answer: "false", correct: false},
+      {answer: "false", correct: false},
+      {answer: "true", correct: true}
     ]
   },
   {
-    question: "how are you4 ?",
+    question: "Question4 ?",
     answerIndex: [ 
-      {answer: "lol!", correct: true},
-      {answer: "happy!", correct: false},
-      {answer: "sadge", correct: false},
-      {answer: "bruh", correct: false}
+      {answer: "true", correct: true},
+      {answer: "false", correct: false},
+      {answer: "false", correct: false},
+      {answer: "false", correct: false}
     ]
   }
 ]
