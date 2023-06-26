@@ -22,19 +22,30 @@ body{
   
   
 }
-.timer{
+/* .timer{
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  text-shadow: 0.3em  0.30em black,  -0.3em  -0.30em black;
+  font-family: var(--Russo-font);
+} */
+.timer, #score{
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
   padding: 10px 20px;
   color: #fff;
   text-shadow: 0.3em  0.30em black,  -0.3em  -0.30em black;
   font-family: var(--Russo-font);
 }
+.timer{
+  border-bottom: 5px solid #fff;
+}
 .nav{
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 10px;
-  justify-content: center;
+  margin-bottom: 10px;
 }
 #container{
   background-color: #fff;

@@ -43,60 +43,69 @@ const quizIndex = [
 // assing where the text if going to written into a variable.
 const questionBox = document.querySelector(".question");
 const answerButtons = document.querySelectorAll(".answerBtn");
+const scoreButton = document.querySelector('#score');
+const timerButton = document.querySelector('.timer');
 // set a current index for the array quizIndex
 let currentIndex = 0;
 // function starts the quiz
-function showQuiz (){
-  // creates a const that holds the current question. While setting the quizIndex array to the currentIndex
+let score = 0;
+let time = 60;
+timerButton.textContent = time;
+// scoreButton.textContent = score;
+function showQuiz() {
   const currentQuestion = quizIndex[currentIndex];
-  // writes the quizIndex array to the box that holds the question
   questionBox.textContent = currentQuestion.question;
 
-  /* path to the answerIndex array sets a function that will give the answers on by one. The array will 
-  set its content on the box that holds the answer */
-  currentQuestion.answerIndex.forEach((answers, index) => {
-    answerButtons[index].textContent = answers.answer;
-    // sets an event that will listen for a click and calls the function. selectAnswer.
-    answerButtons[index].addEventListener('click', function(){
-      selectAnswer(index, answers.correct);
-    });
+  answerButtons.forEach((answerButton, index) => {
+    answerButton.textContent = currentQuestion.answerIndex[index].answer;
+    answerButton.removeEventListener('click', answerClickHandler);
+    answerButton.addEventListener('click', answerClickHandler);
   });
 }
+function startTime(){
+  const timerInterval = setInterval (() =>{
+    time--;
+    timerButton.textContent = time;
 
+    if (time <= 0){
+      clearInterval(timerInterval);
+      //add end of quiz here
+    }
+  }, 1000);
+}
+answerButtons.forEach((answerButton, index) => {
+  answerButton.addEventListener('click', () => {
+    selectAnswer(index, currentQuestion.answerIndex[index].correct);
+  });
+});
 // select answer is going to check if answer is correct.
 function selectAnswer(selectedIndex, isCorrect){
   /* checks answer if it is correct and if it is then add to the 
   current question index making it go next */
   if(isCorrect){
     console.log("Correct answer");
-    currentIndex++;
-    // nested (if) checks for the length of array and if it has not reached end then diplay quiz again.
-    if (currentIndex < quizIndex.length){
-      showQuiz();
-    }else {
-      // else it is complete
-      console.log("quiz completed!");
-      // eventually add code for end of quiz.
-    }
+    score++;
+    updateScore();
   }else {
     console.log("Icorrect answer");
   }
+  currentIndex++;
+   // nested (if) checks for the length of array and if it has not reached end then diplay quiz again.
+  if (currentIndex < quizIndex.length){
+    showQuiz();
+  }else {
+    // else it is complete
+    console.log("quiz completed!");
+    // eventually add code for end of quiz.
+  }
 }
+function updateScore(){
+  scoreButton.textContent = score;
+}
+
+
 showQuiz();
-
-// when aswers is clicked show answer right or wrong 
-
-// if answer is wrong deduct Time 
-
-// if answer is right add points 
-
-// when question is answered move onto next question
-
-// if question is at the end move to leaderboard screen
-
-// put initials in a box and submit to the leaderboard 
-
-// game can be restarted 
+startTime();
 
 // <!-- html button designing and calling the event in javascript -->
 // <input id="btntest" type="button" value="Check" 
@@ -111,3 +120,41 @@ fires off your first selection everytime for some reason, so it's gonna incremen
 Try going through and re-building your javascript piece by piece. Making sure to get a full grasp on each part 
 (e.g. get the currentQuestion rendered to the UI first, then get the answer boxes populated, then attach event listeners to each answer box, 
 then get the logic for checking if the answer is correct, etc. etc.) */
+
+// function selectAnswer(selectedIndex, isCorrect){
+//   /* checks answer if it is correct and if it is then add to the 
+//   current question index making it go next */
+//   if(isCorrect){
+//     console.log("Correct answer");
+//     score++;
+//     updateScore();
+//   }else {
+//     console.log("Icorrect answer");
+//   }
+//   currentIndex++;
+//    // nested (if) checks for the length of array and if it has not reached end then diplay quiz again.
+//   if (currentIndex < quizIndex.length){
+//     showQuiz();
+//   }else {
+//     // else it is complete
+//     console.log("quiz completed!");
+//     // eventually add code for end of quiz.
+//   }
+// }
+
+
+// function showQuiz (){
+//   // creates a const that holds the current question. While setting the quizIndex array to the currentIndex
+//   const currentQuestion = quizIndex[currentIndex];
+//   // writes the quizIndex array to the box that holds the question
+//   questionBox.textContent = currentQuestion.question;
+
+//   /* path to the answerIndex array sets a function that will give the answers on by one. The array will 
+//   set its content on the box that holds the answer */
+//   currentQuestion.answerIndex.forEach((answers, index) => {
+//     answerButtons[index].textContent = answers.answer;
+//     // sets an event that will listen for a click and calls the function. selectAnswer.
+//     answerButtons[index].addEventListener('click', function(){
+//       selectAnswer(index, answers.correct);
+//     });
+//   });
