@@ -29,7 +29,7 @@ body{
   text-shadow: 0.3em  0.30em black,  -0.3em  -0.30em black;
   font-family: var(--Russo-font);
 } */
-.timer, #score{
+#timer, #score{
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -38,7 +38,7 @@ body{
   text-shadow: 0.3em  0.30em black,  -0.3em  -0.30em black;
   font-family: var(--Russo-font);
 }
-.timer{
+#timer{
   border-bottom: 5px solid #fff;
 }
 .nav{
@@ -115,7 +115,13 @@ font-weight: lighter;
   padding: 10px;
 }
 
-
+.over{
+  color: lime;
+  font-family: var(--Russo-font);
+  font-size: 100px;
+  border: 10px solid #fff;
+  background-color: #433c3c;
+}
 /************************************************/
 /* leaderBoard
 /************************************************/
@@ -147,4 +153,6 @@ font-weight: lighter;
   font-family: "";
   font-family: var(--Russo-font);
 }
+
+
 
