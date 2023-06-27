@@ -66,14 +66,25 @@ function selectAnswer(event){
   const correctAnswer = currentQuestion.answerIndex.find(answerObj => answerObj.correct);
   if(selectedAnswer === correctAnswer.answer){
     currentIndex++;
-    score++;
+    score+= 10;
     updateScore();
   }else{
     currentIndex++;
     deductTime();
   }
-  showQuiz();
+  if (currentIndex === quizIndex.length){
+    scoreScreen();
+  }else {
+    showQuiz();
+  }
 }
+
+
+function scoreScreen(){
+  localStorage.setItem("score", score);
+  window.location.href = "./score.html";
+}
+
 
 function updateScore(){
   scoreButton.textContent = score;
@@ -99,12 +110,21 @@ function endQuiz(){
   header.remove();
   main.remove();
 
-  const gameOver = document.createElement('h1')
-  gameOver.classList.add("over");
-  gameOver.textContent = 'GAME OVER';
+  const gameOver = document.createElement('h1');
+  const homeButton = document.createElement('button');
   const body =document.querySelector('body');
 
+  homeButton.textContent = "Home";
+  var anchor = document.createElement('a');
+  anchor.href = "../home.html";
+  anchor.appendChild(homeButton);
+  homeButton.classList.add('home-btn');
+  gameOver.classList.add("over");
+  gameOver.textContent = 'GAME OVER';
+ 
+
   body.append(gameOver);
+  body.append(anchor);
 
 
 }

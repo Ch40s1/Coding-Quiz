@@ -29,7 +29,7 @@ body{
   text-shadow: 0.3em  0.30em black,  -0.3em  -0.30em black;
   font-family: var(--Russo-font);
 } */
-#timer, #score{
+#timer, #score, .final-score, .score-header{
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -110,11 +110,6 @@ font-family: var(--Russo-font);
 font-weight: lighter;
 }
 
-.home-score{
-  margin-top: 40px;
-  padding: 10px;
-}
-
 .over{
   color: lime;
   font-family: var(--Russo-font);
@@ -136,9 +131,17 @@ font-weight: lighter;
   -0.30em 0 black,
   0 -0.30em black;
 }
+.home-score{
+  display: flex;
+  margin-top: 9px;
+  justify-content: center;
+}
 .current-scores{
  align-content: flex-start;
  padding: 10px;
+}
+.final-score, .score-header{
+  font-size: 30px;
 }
 .current-scores > li{
   background-color: #fff;
