@@ -13,12 +13,12 @@ array[0] is one question.
 the actual question is an object while the answer is an arrays of mutiple pair objects. */
 const quizIndex = [
   {
-    question: "In CSS, what is media query used for?",
+    question: "function x (){alert(\"hello!\")} needs what to display the alert?",
     answerIndex: [ 
-      {answer: "To make the web page responsive.", correct: true},
-      {answer: "To set rules for only mobile devices.", correct: false},
-      {answer: "Set the image resolution to 4k.", correct: false},
-      {answer: "Shortcut for min/max width.", correct: false}
+      {answer: "x()", correct: true},
+      {answer: "It will display, does not need anything.", correct: false},
+      {answer: "Another function to call it.", correct: false},
+      {answer: "let y = x.display", correct: false}
     ]
   },
   {
@@ -31,12 +31,12 @@ const quizIndex = [
     ]
   },
   {
-    question: "<img src=\'cat.jpg\"></img> Will this work? ",
+    question: "The DOM is ?",
     answerIndex: [ 
-      {answer: "Yes everything is fine.", correct: false},
-      {answer: "It does not need the closing tag to work.", correct: false},
-      {answer: "It needs to be a png instead of jpg", correct: false},
-      {answer: "It has wrong quotes.", correct: true}
+      {answer: "A tree of css selectors.", correct: false},
+      {answer: "The document object mode", correct: false},
+      {answer: "A file in index.html", correct: false},
+      {answer: "The document object model", correct: true}
     ]
   },
   {
