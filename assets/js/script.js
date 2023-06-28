@@ -134,7 +134,7 @@ function startTime(){
 
 function endQuiz(){
   //selects the essentially the whole page and gets rid of it
-  const main = document.querySelector('#container');
+  const main = document.querySelector('#quiz-container');
   const header = document.querySelector('header');
   header.remove();
   main.remove();

@@ -43,7 +43,7 @@ body{
   gap: 20px;
   margin-bottom: 10px;
 }
-#container{
+#quiz-container{
   background-color: #fff;
   width: 60%;
   max-width: 600px;
