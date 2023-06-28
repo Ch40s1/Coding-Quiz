@@ -147,7 +147,7 @@ function endQuiz(){
   //creates a home button that allows to go back to the home screen.
   homeButton.textContent = "Home";
   var anchor = document.createElement('a');
-  anchor.href = "../home.html";
+  anchor.href = "../index.html";
   anchor.appendChild(homeButton);
   homeButton.classList.add('home-btn');
   gameOver.classList.add("over");
