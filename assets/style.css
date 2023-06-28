@@ -22,14 +22,10 @@ body{
   
   
 }
-/* .timer{
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  color: #fff;
-  text-shadow: 0.3em  0.30em black,  -0.3em  -0.30em black;
-  font-family: var(--Russo-font);
-} */
-#timer, #score, .final-score, .score-header{
+#timer, 
+#score, 
+.final-score, 
+.score-header{
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -109,7 +105,7 @@ font-size: 20px;
 font-family: var(--Russo-font);
 font-weight: lighter;
 }
-
+/* this is the game over screen, it display with javascript*/
 .over{
   color: lime;
   font-family: var(--Russo-font);
@@ -140,7 +136,8 @@ font-weight: lighter;
  align-content: flex-start;
  padding: 10px;
 }
-.final-score, .score-header{
+.final-score, 
+.score-header{
   font-size: 30px;
 }
 .current-scores > li{
@@ -152,7 +149,8 @@ font-weight: lighter;
   font-weight: 500;
   font-family: var(--Russo-font);
 }
-#initials, #send-score{
+#initials, 
+#send-score{
   font-size: 20px;
 }
 #send-score{
