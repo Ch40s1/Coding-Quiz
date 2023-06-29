@@ -81,7 +81,7 @@ function selectAnswer(event){
     updateScore();
 
   }else{
-    //is it is wrong then deduct time but still move to next question
+    //if it is wrong then deduct time but still move to next question
     currentIndex++;
     deductTime();
   }
@@ -119,7 +119,7 @@ function deductTime(){
 
 //starts the timer when it is loaded.
 function startTime(){
-  //sets an interval to deduct time ecery 1 second
+  //sets an interval to deduct time every 1 second
   const timerInterval = setInterval(() => {
     time --;
     timerButton.textContent = time;
@@ -133,7 +133,7 @@ function startTime(){
 }
 
 function endQuiz(){
-  //selects the essentially the whole page and gets rid of it
+  //selects essentially the whole page and gets rid of it
   const main = document.querySelector('#quiz-container');
   const header = document.querySelector('header');
   header.remove();
